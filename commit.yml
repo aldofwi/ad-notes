@@ -1,0 +1,27 @@
+name: Update Notes
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # tous les jours à 9h UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: pip install python-docx
+      - name: Run update script
+        run: python update.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md processed_dates.txt
+          git commit -m "Mise à jour automatique" || echo "Rien à valider"
+          git push
