@@ -2,31 +2,36 @@ name: Update Notes
 
 on:
   schedule:
-    - cron: "0 9 * * *" # tous les jours à 9h UTC
+    # Tous les jours à 9h du matin (UTC)
+    - cron: "0 9 * * *"
   workflow_dispatch:
-
-permissions:
-  contents: write # ✅ donne le droit de push
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
+
       - name: Install dependencies
-        run: pip install python-docx
+        run: |
+          python -m pip install --upgrade pip
+          pip install python-docx python-dateutil
+
       - name: Run update script
         run: python update.py
+
       - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .
           git commit -m "Update notes" || echo "Nothing to commit"
-          git pull --rebase origin master
-          git push origin masters
-
+          git push --force-with-lease origin master
