@@ -1,8 +1,10 @@
 import docx
 import os
+import re
 from collections import defaultdict
 from datetime import datetime
 import random
+from dateutil import parser
 
 DOCX_FILE = "CCR_SG&AD.docx"
 README_FILE = "README.md"
@@ -21,13 +23,21 @@ def load_notes():
         if not text:
             continue
 
+        # Nettoyer (ex: "05/09/2025 (Friday)" → "05/09/2025")
+        clean_text = re.sub(r"\s*\(.*?\)", "", text)
+
         try:
-            date = datetime.strptime(text, "%d/%m/%Y").date()
+            date = parser.parse(clean_text, dayfirst=True).date()
+            # Sauvegarde de l'entrée précédente
             if current_date and buffer:
                 notes[current_date] = buffer
                 buffer = []
             current_date = date
-        except ValueError:
+        except (ValueError, OverflowError):
+            # DEBUG si ça ressemble à une date mais pas exploitable
+            if re.search(r"\d{1,2}[/\-]\d{1,2}[/\-]\d{2,4}", text):
+                print(f"⚠️ DEBUG: Ligne ignorée, format non reconnu → {text}")
+
             if current_date:
                 buffer.append(text)
 
@@ -85,7 +95,7 @@ def update_readme(grouped):
 
 
 def main():
-    if random.random() < 0.33:  # ~1 jour sur 3
+    if random.random() < 0.33:  # ~1 jour sur 3 sans update
         print("⏭️ Aujourd'hui on ne met pas à jour.")
         return
 
@@ -97,7 +107,8 @@ def main():
         print("✅ Toutes les notes ont déjà été traitées.")
         return
 
-    to_process = remaining[:3]  # prendre 3 dates chronologiques
+    # Prendre 3 dates chronologiques
+    to_process = remaining[:3]
     new_entries = {d: all_notes[d] for d in to_process}
 
     grouped_existing = group_notes({
