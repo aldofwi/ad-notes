@@ -31,10 +31,13 @@ jobs:
       - name: Run update script
         run: python update.py
 
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add .
-          git commit -m "Update notes" || echo "Nothing to commit"
-          git push --force-with-lease origin master
+    - name: Commit changes
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+        git fetch origin master
+        git rebase origin/master || echo "No rebase needed"
+        git add .
+        git commit -m "Update notes" || echo "Nothing to commit"
+        git push origin master
+
