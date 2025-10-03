@@ -1,5 +1,8 @@
 name: Update Notes
 
+permissions:
+  contents: write   # autoriser le bot à push sur le dépôt
+
 on:
   schedule:
     # Tous les jours à 9h du matin (UTC)
