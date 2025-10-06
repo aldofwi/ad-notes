@@ -4,20 +4,6 @@
 ## Mois de August 2024
 
 ### Divers
-- 01/08/2024 - Présentation de l’outil WINDEV & du périmètre.
-- 01/08/2024 - Installation des utilitaires : AnyDesk, Filezilla.
-- 01/08/2024 - Installation de WINDEV Suite Saas & HFSQL Center. à vérifier.
-- 01/08/2024 - Sauvegarde des Projets WD28 en local. (from SSD External Hard Drive T5)
-- 01/08/2024 - Récupération d’une archive des écritures de DomiBeauty via le Serveur de Dillon.
-- 01/08/2024 - (Écritures sauvegardées pour chaque jour de la semaine via Batch / 1 week only)
-- 01/08/2024 - MS DOM PWD : Pr0tect!IT
-- 02/08/2024 - Solution : Package Redistribuable C++ manquant sur le poste de travail. (GMES-P-32)
-- 06/08/2024 - Base de Données			Mémoire			 TABLE(AU)
-- 06/08/2024 - Fenêtre WINDEV
-- 06/08/2024 - HLitPremier ramène en mémoire le premier élément d’une table pour pouvoir le manipuler.
-- 06/08/2024 - TableAjouteLigne ajoute des colonnes précises de l’élément dans le tableau de l’interface WD.
-- 06/08/2024 - [tableau par programmation]
-- 06/08/2024 - TableAffiche permet de recharger automatiquement une table.	        [tableau créé par requête ou fichier]
 - 05/08/2024 - SERVER	         Lamentin              Dillon           (2BackUP)
 - 05/08/2024 - BASE NEXXVENTE
 - 05/08/2024 - EXE SERVER
@@ -28,11 +14,10 @@
 - 05/08/2024 - Client.FIC (complet)
 - 05/08/2024 - Client.NDX (lourd)
 - 05/08/2024 - Client.MMO (complément)
-- 07/08/2024 - La Table par Programmation est plus pratique et permet de répondre à tous les besoins.
-- 07/08/2024 - La Table par Fichier est rapide à exécuter mais présente des limites en termes d’implémentation, sur le long terme elle n’est pas recommandée.
-- 07/08/2024 - Suppression d’éléments avec contraintes d’intégrité (Article avec tarifs associés)
-- 07/08/2024 - Gestion des formats DATE (valeur affichée & valeur retournée en base)
-- 07/08/2024 - Initiation aux factures, préparation à la VENTE de produit. (FEN_VENTE)
+- 13/08/2024 - Ajouter les factures associées au client dans la FICHE CLIENT.
+- 13/08/2024 - Agrémenter le fichier Article du booléen ACTIF et du booléen STOCK.
+- 13/08/2024 - Définition des articles ACTIF ou INACTIF + Possibilité de Tri
+- 13/08/2024 - Rajouter la case à cocher « STOCK »  dans la Fiche Article
 - 08/08/2024 - Vérification de la 1ère Fenêtre de VENTE. Affectation par défaut d’un client de passage.
 - 08/08/2024 - Création d’une procédure locale (fonction) :
 - 08/08/2024 - Morceau de code indépendant que l’on peut appeler dans son scope (fenêtre)
@@ -53,6 +38,13 @@
 - 08/08/2024 - 0	6
 - 08/08/2024 - [Zone Mémoire Allouée]
 - 08/08/2024 - Même Adresse
+- 12/08/2024 - DONE :
+- 12/08/2024 - Enregistrement de la 1ère FACTURE ainsi que ses lignes de factures.
+- 12/08/2024 - MODIFICATION DE FACTURE
+- 12/08/2024 - QUESTIONS A POSER Mardi :
+- 12/08/2024 - Comment gérez-vous un tarif qui a été crée sur la même DATE ? First One
+- 12/08/2024 - Ne devrait-on pas ouvrir un aperçu de la facture une fois créée ? Yess Later
+- 12/08/2024 - Doit-on modifier la date de facture quand on modifie une facture ? Date Modif
 - 09/08/2024 - TODO : Reporting + Glossaire + Correction des tarifs de la fenêtre de VENTE.
 - 09/08/2024 - (Tu ramènes le premier tarif de la liste et non pas le tarif en vigueur)
 - 09/08/2024 - Notion de Clé Composée :
@@ -61,14 +53,37 @@
 - 09/08/2024 - Ensuite intégrer la clé composée dans HLitRecherchePremier
 - 09/08/2024 - Soit avec HConstruitValClé(…) Soit directement avec des crochets […]
 - 09/08/2024 - Exemple dans AffichageArticle() ou AffichageArticleVente()
-- 12/08/2024 - DONE :
-- 12/08/2024 - Enregistrement de la 1ère FACTURE ainsi que ses lignes de factures.
-- 12/08/2024 - MODIFICATION DE FACTURE
-- 12/08/2024 - QUESTIONS A POSER Mardi :
-- 12/08/2024 - Comment gérez-vous un tarif qui a été crée sur la même DATE ? First One
-- 12/08/2024 - Ne devrait-on pas ouvrir un aperçu de la facture une fois créée ? Yess Later
-- 12/08/2024 - Doit-on modifier la date de facture quand on modifie une facture ? Date Modif
-- 13/08/2024 - Ajouter les factures associées au client dans la FICHE CLIENT.
-- 13/08/2024 - Agrémenter le fichier Article du booléen ACTIF et du booléen STOCK.
-- 13/08/2024 - Définition des articles ACTIF ou INACTIF + Possibilité de Tri
-- 13/08/2024 - Rajouter la case à cocher « STOCK »  dans la Fiche Article
+- 06/08/2024 - Base de Données			Mémoire			 TABLE(AU)
+- 06/08/2024 - Fenêtre WINDEV
+- 06/08/2024 - HLitPremier ramène en mémoire le premier élément d’une table pour pouvoir le manipuler.
+- 06/08/2024 - TableAjouteLigne ajoute des colonnes précises de l’élément dans le tableau de l’interface WD.
+- 06/08/2024 - [tableau par programmation]
+- 06/08/2024 - TableAffiche permet de recharger automatiquement une table.	        [tableau créé par requête ou fichier]
+- 02/08/2024 - Solution : Package Redistribuable C++ manquant sur le poste de travail. (GMES-P-32)
+- 01/08/2024 - Présentation de l’outil WINDEV & du périmètre.
+- 01/08/2024 - Installation des utilitaires : AnyDesk, Filezilla.
+- 01/08/2024 - Installation de WINDEV Suite Saas & HFSQL Center. à vérifier.
+- 01/08/2024 - Sauvegarde des Projets WD28 en local. (from SSD External Hard Drive T5)
+- 01/08/2024 - Récupération d’une archive des écritures de DomiBeauty via le Serveur de Dillon.
+- 01/08/2024 - (Écritures sauvegardées pour chaque jour de la semaine via Batch / 1 week only)
+- 01/08/2024 - MS DOM PWD : Pr0tect!IT
+- 07/08/2024 - La Table par Programmation est plus pratique et permet de répondre à tous les besoins.
+- 07/08/2024 - La Table par Fichier est rapide à exécuter mais présente des limites en termes d’implémentation, sur le long terme elle n’est pas recommandée.
+- 07/08/2024 - Suppression d’éléments avec contraintes d’intégrité (Article avec tarifs associés)
+- 07/08/2024 - Gestion des formats DATE (valeur affichée & valeur retournée en base)
+- 07/08/2024 - Initiation aux factures, préparation à la VENTE de produit. (FEN_VENTE)
+- 14/08/2024 - Gestion de STOCK, Impact LigneDeFacture
+- 14/08/2024 - Fichier ACHAT à créer + Sortie MANUEL
+- 14/08/2024 - Intégration du HTRansactionDebut & Fin
+- 14/08/2024 - Notion de stock Négatif
+- 16/08/2024 - Présentation de la douchette, avec cas pratique.
+- 16/08/2024 - Outil permettant de scanner les articles, les employés, etc.
+- 16/08/2024 - Intégration de la notion de Code Barre dans WINDEV.
+- 16/08/2024 - Reconnaissance du produit via son CodeBarre (Vente ou Inventaire)
+- 16/08/2024 - Modification du Stock en conséquence.
+- 16/08/2024 - NEVER FORGET :
+- 16/08/2024 - BASE (FICHIER)  Mémoire (Ecriture)  Fenêtre (Ecran)
+- 16/08/2024 - Fenêtre (Ecran)   Mémoire (Ecriture)  BASE (FICHIER)
+- 19/08/2024 - Relationnel effectué entre SortieManuelle & Article / Achat & Article
+- 19/08/2024 - Création de MotifSortieStock pour les libellés. (Perte, Vol, etc.)
+- 19/08/2024 - Gestion du Paiement basique en cours (Transaction : Facture + Paiement)
