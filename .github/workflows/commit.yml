@@ -35,8 +35,8 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git fetch origin master
-          git rebase origin/master || echo "No rebase needed"
           git add .
           git commit -m "Update notes" || echo "Nothing to commit"
+          git fetch origin master
+          git rebase origin/master || echo "No rebase needed"
           git push origin master --force
