@@ -4,6 +4,30 @@
 ## Mois de August 2024
 
 ### Divers
+- 07/08/2024 - La Table par Programmation est plus pratique et permet de répondre à tous les besoins.
+- 07/08/2024 - La Table par Fichier est rapide à exécuter mais présente des limites en termes d’implémentation, sur le long terme elle n’est pas recommandée.
+- 07/08/2024 - Suppression d’éléments avec contraintes d’intégrité (Article avec tarifs associés)
+- 07/08/2024 - Gestion des formats DATE (valeur affichée & valeur retournée en base)
+- 07/08/2024 - Initiation aux factures, préparation à la VENTE de produit. (FEN_VENTE)
+- 20/08/2024 - Création d’un Fichier de Relation (ex : entre Facture & Paiement)
+- 20/08/2024 - Gestion des Factures via une Fenêtre et non via la fenêtre de Vente
+- 20/08/2024 - Contrôle des différents montants lors du Paiement (Total, Payé, Reste)
+- 20/08/2024 - Gestion des paiements en cours, Affichage de la différence.
+- 29/08/2024 - Problème de duplication de l’ETAT Facture, Création de new ETAT. New Requête
+- 29/08/2024 - ETAT Texte Contractuel adapté à un DEVIS. Message de prévention pour le client.
+- 29/08/2024 - Rajout de new éléments : Email Soc, SIRET, Phone Client, Cadre FRM Client.
+- 29/08/2024 - Création de l’ETAT TVA dans le Devis.
+- 12/08/2024 - DONE :
+- 12/08/2024 - Enregistrement de la 1ère FACTURE ainsi que ses lignes de factures.
+- 12/08/2024 - MODIFICATION DE FACTURE
+- 12/08/2024 - QUESTIONS A POSER Mardi :
+- 12/08/2024 - Comment gérez-vous un tarif qui a été crée sur la même DATE ? First One
+- 12/08/2024 - Ne devrait-on pas ouvrir un aperçu de la facture une fois créée ? Yess Later
+- 12/08/2024 - Doit-on modifier la date de facture quand on modifie une facture ? Date Modif
+- 14/08/2024 - Gestion de STOCK, Impact LigneDeFacture
+- 14/08/2024 - Fichier ACHAT à créer + Sortie MANUEL
+- 14/08/2024 - Intégration du HTRansactionDebut & Fin
+- 14/08/2024 - Notion de stock Négatif
 - 13/08/2024 - Ajouter les factures associées au client dans la FICHE CLIENT.
 - 13/08/2024 - Agrémenter le fichier Article du booléen ACTIF et du booléen STOCK.
 - 13/08/2024 - Définition des articles ACTIF ou INACTIF + Possibilité de Tri
@@ -25,16 +49,6 @@
 - 22/08/2024 - Quand EDS va ouvrir son logiciel, elle bénificiera de la nouvelle version.
 - 22/08/2024 - Correctif appliqué sur le Chiffre d’Affaires du client (Global, ensuite par année)
 - 22/08/2024 - Initiation au concept des ETATS pour l’édition de Factures. (PDF, Imprimantes)
-- 20/08/2024 - Création d’un Fichier de Relation (ex : entre Facture & Paiement)
-- 20/08/2024 - Gestion des Factures via une Fenêtre et non via la fenêtre de Vente
-- 20/08/2024 - Contrôle des différents montants lors du Paiement (Total, Payé, Reste)
-- 20/08/2024 - Gestion des paiements en cours, Affichage de la différence.
-- 06/08/2024 - Base de Données			Mémoire			 TABLE(AU)
-- 06/08/2024 - Fenêtre WINDEV
-- 06/08/2024 - HLitPremier ramène en mémoire le premier élément d’une table pour pouvoir le manipuler.
-- 06/08/2024 - TableAjouteLigne ajoute des colonnes précises de l’élément dans le tableau de l’interface WD.
-- 06/08/2024 - [tableau par programmation]
-- 06/08/2024 - TableAffiche permet de recharger automatiquement une table.	        [tableau créé par requête ou fichier]
 - 08/08/2024 - Vérification de la 1ère Fenêtre de VENTE. Affectation par défaut d’un client de passage.
 - 08/08/2024 - Création d’une procédure locale (fonction) :
 - 08/08/2024 - Morceau de code indépendant que l’on peut appeler dans son scope (fenêtre)
@@ -55,27 +69,9 @@
 - 08/08/2024 - 0	6
 - 08/08/2024 - [Zone Mémoire Allouée]
 - 08/08/2024 - Même Adresse
-- 12/08/2024 - DONE :
-- 12/08/2024 - Enregistrement de la 1ère FACTURE ainsi que ses lignes de factures.
-- 12/08/2024 - MODIFICATION DE FACTURE
-- 12/08/2024 - QUESTIONS A POSER Mardi :
-- 12/08/2024 - Comment gérez-vous un tarif qui a été crée sur la même DATE ? First One
-- 12/08/2024 - Ne devrait-on pas ouvrir un aperçu de la facture une fois créée ? Yess Later
-- 12/08/2024 - Doit-on modifier la date de facture quand on modifie une facture ? Date Modif
-- 21/08/2024 - Correctif appliqué sur la SAISIE_CODE_BARRE
-- 21/08/2024 - Vérification des paiements partiel et des factures sans paiement
-- 21/08/2024 - Création des Famille d’Articles. (Inventaire, Emplacement, Remise, etc.)
-- 21/08/2024 - Initialiser la recherche d’articles par famille (REQ Famille)
-- 05/08/2024 - SERVER	         Lamentin              Dillon           (2BackUP)
-- 05/08/2024 - BASE NEXXVENTE
-- 05/08/2024 - EXE SERVER
-- 05/08/2024 - POSTE1 		  POSTE2 		POSTE3 	            POSTE4
-- 05/08/2024 - (BASE VENTE-SECOURS)
-- 05/08/2024 - *Si le Serveur de la Base NEXXVENTE est DOWN, la Base Vente-Secours prend le relais.
-- 05/08/2024 - *Il s’agit d’une sauvegarde de la BASE NEXXVENTE qui permet au poste 2 de fonctionner en Offline.
-- 05/08/2024 - Client.FIC (complet)
-- 05/08/2024 - Client.NDX (lourd)
-- 05/08/2024 - Client.MMO (complément)
+- 19/08/2024 - Relationnel effectué entre SortieManuelle & Article / Achat & Article
+- 19/08/2024 - Création de MotifSortieStock pour les libellés. (Perte, Vol, etc.)
+- 19/08/2024 - Gestion du Paiement basique en cours (Transaction : Facture + Paiement)
 - 01/08/2024 - Présentation de l’outil WINDEV & du périmètre.
 - 01/08/2024 - Installation des utilitaires : AnyDesk, Filezilla.
 - 01/08/2024 - Installation de WINDEV Suite Saas & HFSQL Center. à vérifier.
@@ -83,10 +79,6 @@
 - 01/08/2024 - Récupération d’une archive des écritures de DomiBeauty via le Serveur de Dillon.
 - 01/08/2024 - (Écritures sauvegardées pour chaque jour de la semaine via Batch / 1 week only)
 - 01/08/2024 - MS DOM PWD : Pr0tect!IT
-- 14/08/2024 - Gestion de STOCK, Impact LigneDeFacture
-- 14/08/2024 - Fichier ACHAT à créer + Sortie MANUEL
-- 14/08/2024 - Intégration du HTRansactionDebut & Fin
-- 14/08/2024 - Notion de stock Négatif
 - 09/08/2024 - TODO : Reporting + Glossaire + Correction des tarifs de la fenêtre de VENTE.
 - 09/08/2024 - (Tu ramènes le premier tarif de la liste et non pas le tarif en vigueur)
 - 09/08/2024 - Notion de Clé Composée :
@@ -103,15 +95,10 @@
 - 16/08/2024 - NEVER FORGET :
 - 16/08/2024 - BASE (FICHIER)  Mémoire (Ecriture)  Fenêtre (Ecran)
 - 16/08/2024 - Fenêtre (Ecran)   Mémoire (Ecriture)  BASE (FICHIER)
-- 02/08/2024 - Solution : Package Redistribuable C++ manquant sur le poste de travail. (GMES-P-32)
-- 19/08/2024 - Relationnel effectué entre SortieManuelle & Article / Achat & Article
-- 19/08/2024 - Création de MotifSortieStock pour les libellés. (Perte, Vol, etc.)
-- 19/08/2024 - Gestion du Paiement basique en cours (Transaction : Facture + Paiement)
-- 07/08/2024 - La Table par Programmation est plus pratique et permet de répondre à tous les besoins.
-- 07/08/2024 - La Table par Fichier est rapide à exécuter mais présente des limites en termes d’implémentation, sur le long terme elle n’est pas recommandée.
-- 07/08/2024 - Suppression d’éléments avec contraintes d’intégrité (Article avec tarifs associés)
-- 07/08/2024 - Gestion des formats DATE (valeur affichée & valeur retournée en base)
-- 07/08/2024 - Initiation aux factures, préparation à la VENTE de produit. (FEN_VENTE)
+- 28/08/2024 - Génération du Devis, avec Modification & Suppression.
+- 28/08/2024 - SI on doit rattacher 1Devis à 1Facture, champ NumDev à mettre dans Facture.
+- 28/08/2024 - Possibilité de Transformer un devis en facture, mais pas l’inverse.
+- 28/08/2024 - TODO : Créer 1ETAT Devis pour Imprimer le document, BTN_Imprimer + OuiNon
 - 23/08/2024 - Visite chez le client BATT-ECO
 - 23/08/2024 - Vérification de l’installation de la version SAAS : factures, etc.
 - 23/08/2024 - Problème à l’affichage d’un devis, mailing & Imprimante à supprimer.
@@ -119,13 +106,16 @@
 - 23/08/2024 - Problème de facture qui se créé toutes seules, après abandon ?
 - 23/08/2024 - Gestion des Etats, Requêtes, Implémentation par bloc, Somme sur Rupture
 - 23/08/2024 - Finir une transaction AVANT de fermer une fenêtre. Perte Validation Operation.
-- 26/08/2024 - Bascule à venir de TOUS les clients vers la version SAAS.
-- 26/08/2024 - Installation de la version SAAS chez Altech (Dillon) à 8h.
-- 26/08/2024 - Vérification du bon fonctionnement des postes. (factures, ticket de caisses, etc.)
-- 26/08/2024 - Installation NexxVenteReseau, NexxVente, NexxTrans, NextVenteSecours.
-- 26/08/2024 - Ajustement de la Recherche Client.
-- 26/08/2024 - Initiation au DEVIS à venir. (Similaire à la Facture)
-- 26/08/2024 - Gestion des ETATS avec le total Montant TTC/TVA & total PAIEMENT à intégrer.
+- 05/08/2024 - SERVER	         Lamentin              Dillon           (2BackUP)
+- 05/08/2024 - BASE NEXXVENTE
+- 05/08/2024 - EXE SERVER
+- 05/08/2024 - POSTE1 		  POSTE2 		POSTE3 	            POSTE4
+- 05/08/2024 - (BASE VENTE-SECOURS)
+- 05/08/2024 - *Si le Serveur de la Base NEXXVENTE est DOWN, la Base Vente-Secours prend le relais.
+- 05/08/2024 - *Il s’agit d’une sauvegarde de la BASE NEXXVENTE qui permet au poste 2 de fonctionner en Offline.
+- 05/08/2024 - Client.FIC (complet)
+- 05/08/2024 - Client.NDX (lourd)
+- 05/08/2024 - Client.MMO (complément)
 - 27/08/2024 - Finalisation de l’ETAT Texte Contractuel (CGV)
 - 27/08/2024 - Agencement final de la Facture à Imprimer.
 - 27/08/2024 - Gestion de License Windev après message d’erreur (9953)
@@ -133,3 +123,61 @@
 - 27/08/2024 - Analyse effectuée pour la gestion des devis.
 - 27/08/2024 - Adaptation de la Fenêtre PAIEMENT.
 - 27/08/2024 - TODO : BTN « Générer Devis », LISTE_DEVIS_CLIENT, FEN_DEVIS (BTN_Imprimer).
+- 06/08/2024 - Base de Données			Mémoire			 TABLE(AU)
+- 06/08/2024 - Fenêtre WINDEV
+- 06/08/2024 - HLitPremier ramène en mémoire le premier élément d’une table pour pouvoir le manipuler.
+- 06/08/2024 - TableAjouteLigne ajoute des colonnes précises de l’élément dans le tableau de l’interface WD.
+- 06/08/2024 - [tableau par programmation]
+- 06/08/2024 - TableAffiche permet de recharger automatiquement une table.	        [tableau créé par requête ou fichier]
+- 26/08/2024 - Bascule à venir de TOUS les clients vers la version SAAS.
+- 26/08/2024 - Installation de la version SAAS chez Altech (Dillon) à 8h.
+- 26/08/2024 - Vérification du bon fonctionnement des postes. (factures, ticket de caisses, etc.)
+- 26/08/2024 - Installation NexxVenteReseau, NexxVente, NexxTrans, NextVenteSecours.
+- 26/08/2024 - Ajustement de la Recherche Client.
+- 26/08/2024 - Initiation au DEVIS à venir. (Similaire à la Facture)
+- 26/08/2024 - Gestion des ETATS avec le total Montant TTC/TVA & total PAIEMENT à intégrer.
+- 02/08/2024 - Solution : Package Redistribuable C++ manquant sur le poste de travail. (GMES-P-32)
+- 21/08/2024 - Correctif appliqué sur la SAISIE_CODE_BARRE
+- 21/08/2024 - Vérification des paiements partiel et des factures sans paiement
+- 21/08/2024 - Création des Famille d’Articles. (Inventaire, Emplacement, Remise, etc.)
+- 21/08/2024 - Initialiser la recherche d’articles par famille (REQ Famille)
+
+
+## Mois de September 2024
+
+### Divers
+- 02/09/2024 - Message de prévention, Modification d’un devis en Facture si devis confirmé
+- 02/09/2024 - Création d’un menu déroulant pour regrouper les familles et les actions.
+- 02/09/2024 - Procédure d’installation, Création & Paramétrage d’un exécutable.
+- 02/09/2024 - Pb persistant Acompte non affiché sur ETAT PAIEMENT de ETAT FACTURES.
+- 03/09/2024 - Visite chez Mr & Mme JEANNETTE (DERBY)
+- 03/09/2024 - Pb de comptabilité, Envoi de fichier vers SAGE.
+- 03/09/2024 - Etats des ventes, Etats des paiements de Juillet 2024.
+- 03/09/2024 - Gap d’encaissement 10k  15k. Vérification à faire demain.
+- 03/09/2024 - Jeudi 15h Rdv chez PIX’L. Sujet des Franchises de FTP.
+- 04/09/2024 - Récupération de l’imprimante EPSON pour ticket de caisse.
+- 04/09/2024 - Installation du driver TM-T20II avec Utilitaires.
+- 04/09/2024 - Fonctionnement vérifié dans NexxComers (DomiBeauty & Epicerie)
+- 04/09/2024 - Impression des tickets de caisse effectives. ETAT_TICKET_CAISSE
+- 04/09/2024 - Pour Vendredi : Circuit de présentation.
+- 04/09/2024 - Initialisation de la Société.
+- 04/09/2024 - Modification du texte contractuel.
+- 04/09/2024 - Création d’une famille d’articles.
+- 04/09/2024 - Création d’un article, Affectation d’un prix & de son stock.
+- 04/09/2024 - Création d’un client.
+- 04/09/2024 - Validation & Impression d’un devis pour le nouveau client.
+- 04/09/2024 - Rajouter avec la douchette un élément supplémentaire.
+- 04/09/2024 - Transformation du devis en Facture.
+- 04/09/2024 - Impression de la Facture.
+- 04/09/2024 - Tentative de reModifier un devis déjà confirmé (ou l’inverse).
+- 05/09/2024 - Correctif appliqué à la version Epicerie de NexxComers.
+- 05/09/2024 - Préparation de la présentation du lendemain. (RG, DL, OD, AD, AS)
+- 05/09/2024 - Création de l’ETAT_TICKET_CAISSE avec paramétrage & formattage.
+- 05/09/2024 - Remettre le mot de passe & Recréer la procédure d’installation de l’exe.
+- 05/09/2024 - Visite prévue à 15h chez PIX’L. Coordinat° pour les franchises FTP.
+- 05/09/2024 - 1er écran : Choix de la commune (Livraison) ou de la Franchise (Emporter)
+- 05/09/2024 - 1 compte Client se connecte sur plusieurs pizzerias.
+- 05/09/2024 - 1 Produit par pizzeria, Validé  par le patron.
+
+### Windev
+- 05/09/2024 - Windev récupère le lien d’API propore à chaque franchisé (bascule)
