@@ -33,8 +33,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config user.name "aldofwi"
+          git config user.email "42814580+aldofwi@users.noreply.github.com"
           git add .
           git commit -m "Update notes" || echo "Nothing to commit"
           git fetch origin master
